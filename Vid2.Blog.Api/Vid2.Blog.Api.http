@@ -1,0 +1,6 @@
+@Vid2.Blog.Api_HostAddress = http://localhost:5121
+
+GET {{Vid2.Blog.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
