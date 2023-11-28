@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using OpenAI.Extensions;
 using Vid2.Blog.Api.Data;
 using Vid2.Blog.Api.Services;
@@ -18,7 +19,10 @@ builder
     .Services
     .AddDbContext<DataContext>(
         options =>
-            options.UseNpgsql(builder.Configuration.GetConnectionString("Default Connection"))
+            options.UseNpgsql(builder.Configuration
+                .GetConnectionString("DefaultConnection"))
+                .UseSnakeCaseNamingConvention()
+            
     );
 
 builder.Services.AddOpenAIService();

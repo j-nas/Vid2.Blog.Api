@@ -7,6 +7,6 @@ namespace Vid2.Blog.Api.Services
 {
     public interface ITranscriptionService
     {
-        Task<string> GenerateBlogPost(string transcript);
+        Task<string> GenerateBlogPost(string transcript, bool forceUpdate = false);
     }
 }

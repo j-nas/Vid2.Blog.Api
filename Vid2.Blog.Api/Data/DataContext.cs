@@ -8,6 +8,7 @@ namespace Vid2.Blog.Api.Data
         public DataContext(DbContextOptions<DataContext> options)
             : base(options) { }
 
-        public DbSet<BlogPost> Blogs { get; set; }
+        // public DbSet<BlogPost> Blogs { get; set; }
+        public DbSet<Result> Results { get; set; }
     }
 }
